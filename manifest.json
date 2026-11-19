@@ -1,0 +1,9 @@
+{
+  "id": "drive-vault-sync",
+  "name": "Drive Vault Sync",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Two-way automatic sync of your vault with a Google Drive folder, on desktop and mobile.",
+  "author": "you",
+  "isDesktopOnly": false
+}
