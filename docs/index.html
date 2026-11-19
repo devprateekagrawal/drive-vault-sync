@@ -3,27 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Return to Obsidian</title>
+<title>Drive Vault Sync</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 40px 16px; text-align: center; background: Canvas; color: CanvasText; }
-  a.btn { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 10px; background: #7c3aed; color: #fff; text-decoration: none; font-weight: 600; }
-  p.small { opacity: .7; font-size: 14px; }
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 40px 16px; background: Canvas; color: CanvasText; }
+  h1 { margin-bottom: 4px; }
+  .sub { opacity: .7; margin-top: 0; }
 </style>
 </head>
 <body>
-  <h1 id="title">Returning to Obsidian…</h1>
-  <p id="msg">If Obsidian does not open by itself, tap the button.</p>
-  <a class="btn" id="go" href="#">Open Obsidian</a>
-  <p class="small">This page only passes Google's one-time sign-in code to the Drive Vault Sync plugin. It stores nothing and sends nothing anywhere else.</p>
-<script>
-  // Forward ?code=...&state=... (or ?error=...) to the plugin's obsidian:// handler.
-  var target = "obsidian://drive-vault-sync-auth" + window.location.search;
-  document.getElementById("go").href = target;
-  if (new URLSearchParams(window.location.search).has("error")) {
-    document.getElementById("title").textContent = "Sign-in was cancelled";
-  }
-  window.location.replace(target);
-</script>
+  <h1>Drive Vault Sync</h1>
+  <p class="sub">A free Obsidian plugin that keeps your vault in sync between your devices through your own Google Drive.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Two-way sync of notes, folders and attachments between Obsidian on desktop and mobile.</li>
+    <li>Your notes are stored in a folder in <strong>your own</strong> Google Drive. There is no server in between.</li>
+    <li>It uses the limited <code>drive.file</code> permission, so it can only see the files it created itself, not the rest of your Drive.</li>
+  </ul>
+
+  <h2>Links</h2>
+  <ul>
+    <li><a href="https://github.com/devprateekagrawal/drive-vault-sync">Source code and setup guide</a></li>
+    <li><a href="privacy.html">Privacy policy</a></li>
+  </ul>
 </body>
 </html>

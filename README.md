@@ -35,14 +35,14 @@ You create your own free Google "app". Your notes only go between your devices a
      ⚠️ If you leave it in *Testing*, Google logs you out every 7 days.
    - **Data access → Add scopes:** `https://www.googleapis.com/auth/drive.file` only. Google rates this scope non-sensitive, so no review is needed.
 4. **Clients → Create client → Web application.**
-   - Authorized redirect URI: your page from step 2 below, e.g. `https://YOURNAME.github.io/drive-vault-sync/`
+   - Authorized redirect URI: your page from step 2 below, e.g. `https://YOURNAME.github.io/drive-vault-sync/auth/`
    - Copy the **Client ID** and **Client secret**.
 
 ### 2. Redirect page (free, GitHub Pages)
-Google can't send you straight back into Obsidian, so a tiny page (`docs/index.html`) passes the sign-in code to `obsidian://drive-vault-sync-auth`. It stores nothing.
+Google can't send you straight back into Obsidian, so a tiny page (`docs/auth/index.html`) passes the sign-in code to `obsidian://drive-vault-sync-auth`. It stores nothing.
 1. Push this repo to GitHub (it can be public; it contains no secrets).
 2. Repo **Settings → Pages → Deploy from a branch → `main` / `/docs`**.
-3. Your redirect URL is `https://YOURNAME.github.io/drive-vault-sync/`. It must match step 1.4 exactly, including the trailing `/`.
+3. Your redirect URL is `https://YOURNAME.github.io/drive-vault-sync/auth/`. It must match step 1.4 exactly, including the trailing `/`.
 
 ### 3. Install the plugin
 Run `npm install` and `npm run build`, which produce `main.js`. Then copy **`main.js` + `manifest.json`** into:

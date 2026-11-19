@@ -82,7 +82,7 @@ export class SettingsTab extends PluginSettingTab {
 				});
 		text("Client ID", "From your Google Cloud project: APIs & Services > Credentials > OAuth client (Web application).", "clientId");
 		text("Client secret", "From the same OAuth client.", "clientSecret", true);
-		text("Redirect URL", "Your GitHub Pages address for docs/index.html, e.g. https://you.github.io/drive-vault-sync/", "redirectUri");
+		text("Redirect URL", "Your GitHub Pages address for docs/auth/, e.g. https://you.github.io/drive-vault-sync/auth/", "redirectUri");
 
 		// --- Sync ---
 		new Setting(containerEl).setName("Sync").setHeading();

@@ -2,7 +2,7 @@ import { Notice, requestUrl } from "obsidian";
 
 // Google OAuth 2.0 "authorization code + PKCE" flow, the same on desktop and Android:
 //   1. Open the system browser at Google's consent page.
-//   2. Google redirects to your static redirect page (docs/index.html on GitHub Pages).
+//   2. Google redirects to your static redirect page (docs/auth/index.html on GitHub Pages).
 //   3. That page forwards to obsidian://drive-vault-sync-auth?code=...&state=...
 //   4. Obsidian hands the code to this plugin, which trades it for tokens.
 // The refresh token is kept in this device's plugin data (.obsidian/plugins/drive-vault-sync/data.json),
